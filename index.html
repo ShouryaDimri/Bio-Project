@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Interactive 3D Explorer - Molecular Structure Visualization</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="dna-loader"></div>
+            <p>Loading DNA Structure...</p>
+        </div>
+    </div>
+
+    <!-- Main Canvas -->
+    <canvas id="three-canvas"></canvas>
+
+    <!-- Controls Panel -->
+    <div class="controls-panel">
+        <button id="pause-btn" class="control-btn" title="Pause/Play Animation">⏸️</button>
+        <button id="wireframe-btn" class="control-btn" title="Toggle Wireframe Mode">🔲</button>
+        <button id="reset-btn" class="control-btn" title="Reset Camera">🔄</button>
+    </div>
+
+    <!-- Tooltip -->
+    <div id="tooltip" class="tooltip"></div>
+
+    <!-- Content Sections -->
+    <div class="content-wrapper">
+        <!-- Hero Section -->
+        <section class="content-section hero-section" data-section="0">
+            <div class="section-content">
+                <h1 class="main-title">TEAM GENOMIC GENIUSES</h1>
+                <p class="subtitle">Explore the molecular structure of life</p>
+                <div class="scroll-indicator">
+                    <span>Scroll to explore</span>
+                    <div class="scroll-arrow">↓</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DNA Overview Section -->
+        <section class="content-section" data-section="1">
+            <div class="section-content">
+                <h2>The Double Helix</h2>
+                <p>DNA (Deoxyribonucleic Acid) is the hereditary material in humans and almost all other organisms. Its iconic double helix structure was first described by Watson and Crick in 1953.</p>
+                <ul class="feature-list">
+                    <li>Two complementary strands wound around each other</li>
+                    <li>Right-handed helical structure</li>
+                    <li>Approximately 3.4 Ångströms between base pairs</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sugar-Phosphate Backbone Section -->
+        <section class="content-section" data-section="2">
+            <div class="section-content">
+                <h2>Sugar-Phosphate Backbone</h2>
+                <p>The structural framework of DNA consists of alternating sugar (deoxyribose) and phosphate groups. This backbone provides stability and protection for the genetic information stored in the bases.</p>
+                <ul class="feature-list">
+                    <li>Phosphate groups create negative charge</li>
+                    <li>Deoxyribose sugar connects to bases</li>
+                    <li>Forms the outer "rails" of the DNA ladder</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Nitrogenous Bases Section -->
+        <section class="content-section" data-section="3">
+            <div class="section-content">
+                <h2>Nitrogenous Bases</h2>
+                <p>The four bases - Adenine (A), Thymine (T), Guanine (G), and Cytosine (C) - store the genetic information. They form the "rungs" of the DNA ladder through hydrogen bonding.</p>
+                <div class="base-pairs">
+                    <div class="base-pair">
+                        <span class="base adenine">A</span>
+                        <span class="bond">≡</span>
+                        <span class="base thymine">T</span>
+                        <span class="bonds-count">2 bonds</span>
+                    </div>
+                    <div class="base-pair">
+                        <span class="base guanine">G</span>
+                        <span class="bond">≡</span>
+                        <span class="base cytosine">C</span>
+                        <span class="bonds-count">3 bonds</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hydrogen Bonds Section -->
+        <section class="content-section" data-section="4">
+            <div class="section-content">
+                <h2>Hydrogen Bonds</h2>
+                <p>Weak hydrogen bonds between complementary base pairs hold the two strands together. These bonds are strong enough to maintain structure but weak enough to allow separation during replication.</p>
+                <ul class="feature-list">
+                    <li>A-T pairs form 2 hydrogen bonds</li>
+                    <li>G-C pairs form 3 hydrogen bonds</li>
+                    <li>Enable DNA replication and transcription</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Base Pairing Rules Section -->
+        <section class="content-section" data-section="5">
+            <div class="section-content">
+                <h2>Base Pairing Rules</h2>
+                <p>Chargaff's rules describe the complementary base pairing that ensures genetic fidelity. This complementarity is crucial for DNA replication and repair mechanisms.</p>
+                <ul class="feature-list">
+                    <li>Adenine always pairs with Thymine</li>
+                    <li>Guanine always pairs with Cytosine</li>
+                    <li>Purine always pairs with Pyrimidine</li>
+                    <li>Equal amounts of A=T and G=C in double-stranded DNA</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Final Section -->
+        <section class="content-section final-section" data-section="6">
+            <div class="section-content">
+                <h2>The Code of Life</h2>
+                <p>This elegant double helix structure contains all the instructions needed to build and maintain an organism. From its discovery to modern genetic engineering, DNA continues to reveal the secrets of life itself.</p>
+                <div class="final-stats">
+                    <div class="stat">
+                        <span class="stat-number">3.2 billion</span>
+                        <span class="stat-label">Base pairs in human genome</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">20,000-25,000</span>
+                        <span class="stat-label">Protein-coding genes</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
